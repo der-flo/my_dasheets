@@ -1,0 +1,235 @@
+# From: https://gist.github.com/lucasfais/1207002
+# TODO: License, credits etc.
+
+cheatsheet do
+  title 'Sublime Text 2'
+  short_name 'sublime'
+
+  category do
+    id 'General'
+    entry do
+      name 'go to file'
+      command '⌘T'
+    end
+    entry do
+      name 'go to project'
+      command '⌘⌃P'
+    end
+    entry do
+      name 'go to methods'
+      command '⌘R'
+    end
+    entry do
+      name 'go to line'
+      command '⌃G'
+    end
+    entry do
+      name 'toggle side bar'
+      command '⌘KB'
+    end
+    entry do
+      name 'command prompt'
+      command '⌘⇧P'
+    end
+    entry do
+      name 'python console'
+      command '⌃`'
+    end
+    entry do
+      name 'new window'
+      command '⌘⇧N'
+      notes 'useful for new project'
+    end
+  end
+
+  category do
+    id 'Editing'
+    entry do
+      name 'select line'
+      command '⌘L'
+      notes 'repeat selects next line'
+    end
+    entry do
+      name 'select word'
+      command '⌘D'
+      notes 'repeat selects other occurrences in context for multiple editing'
+    end
+    entry do
+      name 'select content into brackets'
+      command '⌃⇧M'
+    end
+    entry do
+      name 'insert line before'
+      command '⌘⇧↩'
+    end
+    entry do
+      name 'insert line after'
+      command '⌘↩'
+    end
+    entry do
+      name 'delete line'
+      command '⌃⇧K'
+    end
+    entry do
+      name 'delete from cursor to end of line'
+      command '⌘KK'
+    end
+    entry do
+      name 'delete from cursor to start of line'
+      command '⌘K⌫'
+    end
+    entry do
+      name 'duplicate line(s)'
+      command '⌘⇧D'
+    end
+    entry do
+      name 'join lines'
+      command '⌘J'
+    end
+    entry do
+      name 'upper case'
+      command '⌘KU'
+    end
+    entry do
+      name 'lower case'
+      command '⌘KL'
+    end
+    entry do
+      name 'comment'
+      command '⌘/'
+    end
+    entry do
+      name 'block comment'
+      command '⌘⌥/'
+    end
+    entry do
+      name 'redo or repeat'
+      command '⌘Y'
+    end
+    entry do
+      name 'paste and ident'
+      command '⌘⇧V'
+    end
+    entry do
+      name 'autocomplete'
+      command '⌃space'
+      notes 'repeat to select next suggestion'
+    end
+    entry do
+      name 'jump into matching brackets'
+      command '⌃M'
+    end
+    entry do
+      name 'soft undo'
+      command '⌘U'
+      notes 'movement undo'
+    end
+    entry do
+      name 'soft redo'
+      command '⌘⇧U'
+      notes 'movement redo'
+    end
+  end
+
+  category do
+    id 'XML/HTML'
+    entry do
+      name 'select content into tag'
+      command '⌘⇧A'
+    end
+    entry do
+      name 'close tag'
+      command '⌘⌥.'
+    end
+  end
+  category do
+    id 'Find/Replace'
+    entry do
+      name 'find'
+      command '⌘F'
+    end
+    entry do
+      name 'replace'
+      command '⌘⌥F'
+    end
+    entry do
+      name 'find next occurrence of current word'
+      command '⌘⌥G'
+    end
+    entry do
+      name 'select all occurrences of current word for multiple editing'
+      command '⌘⌃G'
+    end
+    entry do
+      name 'find in files'
+      command '⌘⇧F'
+    end
+  end
+  category do
+    id 'Splits/Tabs'
+    entry do
+      name 'single column'
+      command '⌘⌥1'
+    end
+    entry do
+      name 'two columns'
+      command '⌘⌥2'
+    end
+    entry do
+      name 'grid'
+      command '⌘⌥5'
+      notes '2x2'
+    end
+    entry do
+      name 'focus group'
+      command '⌃[1, 2, 3, 4]'
+    end
+    entry do
+      name 'move file to group'
+      command '⌃⇧[1, 2, 3, 4]'
+    end
+    entry do
+      name 'select tab'
+      command '⌘[1, 2, 3,…]'
+    end
+  end
+  category do
+    id 'Bookmarks'
+    entry do
+      name 'toggle bookmark'
+      command '⌘F2'
+    end
+    entry do
+      name 'next bookmark'
+      command 'F2'
+    end
+    entry do
+      name 'previous bookmark'
+      command '⇧F2'
+    end
+    entry do
+      name 'clear bookmarks'
+      command '⌘⇧F2'
+    end
+  end
+  category do
+    id 'Marks'
+    entry do
+      name 'set mark'
+      command '⌘K space'
+    end
+    entry do
+      name 'delete from cursor to mark'
+      command '⌘KW'
+    end
+    entry do
+      name 'select from cursor to mark'
+      command '⌘KA'
+    end
+    entry do
+      name 'clear mark'
+      command '⌘KG'
+    end
+  end
+end
+
