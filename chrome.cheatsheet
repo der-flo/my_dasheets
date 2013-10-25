@@ -1,0 +1,155 @@
+cheatsheet do
+  title 'Chrome'
+  short_name 'chrome'
+
+  category do
+    id 'All panels'
+    entry do
+      name 'Go to the panel to the left'
+      command '⌘['
+    end
+    entry do
+      name 'Go to the panel to the right'
+      command '⌘]'
+    end
+    entry do
+      name 'Go back in panel history'
+      command '⌥⌘['
+    end
+    entry do
+      name 'Go forward in panel history'
+      command '⌥⌘]'
+    end
+
+    entry do
+      name 'Toggle console'
+      command '⌘~'
+    end
+    entry do
+      name 'Search'
+      command '⌘F'
+    end
+    entry do
+      name 'Search across all sources'
+      command '⌥⌘F'
+    end
+    entry do
+      name 'Go to source'
+      command '⌘O'
+    end
+    entry do
+      name 'Find next'
+      command '⌘G'
+    end
+    entry do
+      name 'Find previous'
+      command '⇧⌘G'
+    end
+    entry do
+      name 'Go to line'
+      command '⌃G'
+    end
+    entry do
+      name 'Show general settings'
+      command 'F1'
+    end
+    entry do
+      name 'Show general settings'
+      command '?'
+    end
+  end
+
+  category do
+    id 'Console'
+    entry do
+      name 'Clear console'
+      command '⌘K'
+    end
+    entry do
+      name 'Clear console'
+      command '⌃L'
+    end
+    entry do
+      name 'Autcomplete common prefix'
+      command '⇥'
+    end
+    entry do
+      name 'Accept suggestion'
+      command '→'
+    end
+    entry do
+      name 'Next line'
+      command '↓'
+    end
+    entry do
+      name 'Previous line'
+      command '↑'
+    end
+    entry do
+      name 'Next command'
+      command '⌥N'
+    end
+    entry do
+      name 'Previous command'
+      command '⌥P'
+    end
+    entry do
+      name 'Execute command'
+      command '↩'
+    end
+  end
+
+  # https://developers.google.com/chrome-developer-tools/docs/shortcuts
+  # TODO: Tastendesign wäre auch von dort übernehmbar
+
+  # category do
+  #   id ''
+  #   entry do
+  #     name ''
+  #     command '⌥⌃⌘'
+  #   end
+  #   entry do
+  #     name ''
+  #     command '⌥⌃⌘'
+  #   end
+  #   entry do
+  #     name ''
+  #     command '⌥⌃⌘'
+  #   end
+  #   entry do
+  #     name ''
+  #     command '⌥⌃⌘'
+  #   end
+  #   entry do
+  #     name ''
+  #     command '⌥⌃⌘'
+  #   end
+  # end
+
+  # category do
+  #   id ''
+  #   entry do
+  #     name ''
+  #     command '⌥⌃⌘'
+  #   end
+  #   entry do
+  #     name ''
+  #     command '⌥⌃⌘'
+  #   end
+  #   entry do
+  #     name ''
+  #     command '⌥⌃⌘'
+  #   end
+  #   entry do
+  #     name ''
+  #     command '⌥⌃⌘'
+  #   end
+  #   entry do
+  #     name ''
+  #     command '⌥⌃⌘'
+  #   end
+  # end
+
+  # TODO: More
+end
+
