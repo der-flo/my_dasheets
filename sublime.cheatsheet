@@ -1,9 +1,9 @@
-# From: https://gist.github.com/lucasfais/1207002
-# TODO: License, credits etc.
+# TODO: License?
 
 cheatsheet do
   title 'Sublime Text 2'
   short_name 'sublime'
+  introduction 'Basis: https://gist.github.com/lucasfais/1207002, thanks Lucas!'
 
   category do
     id 'General'
