@@ -1,6 +1,107 @@
 cheatsheet do
-  title 'TMUX-Cheatsheet'
+  title 'tmux cheatsheet'
   short_name 'tmux'
+  introduction \
+    'Based on [tmux: Productive Mouse-Free Development](http://pragprog.com/book/bhtmux/tmux) ' +
+    '(The Pragmatic Progammers - Brian P. Hogan).'
+
+  category do
+    id 'shell commands'
+    entry do
+      name 'Create a named session'
+      command 'tmux new-session -s sessionname'
+    end
+    entry do
+      name 'Create a named session'
+      command 'tmux new -s sessionname'
+    end
+    entry do
+      name 'Create a detached session and run _top_ inside'
+      command 'tmux new -s sessionname -d top'
+    end
+    entry do
+      name 'Create session _sessionname_ with window _win_'
+      command 'tmux new -s sessionname -n win'
+    end
+    entry do
+      name 'List sessions'
+      command 'tmux list-sessions'
+    end
+    entry do
+      name 'List sessions'
+      command 'tmux ls'
+    end
+    entry do
+      name 'TODO'
+      command 'tmux attach'
+    end
+    entry do
+      name 'Attach to session with name _sessionname_'
+      command 'tmux attach -t sessionname'
+    end
+    entry do
+      name 'Kill session by name'
+      command 'tmux kill-session -t sessionname'
+    end
+    entry do
+      name 'Return 0 if session exists'
+      command 'tmux has-session -t sessionname'
+    end
+  end
+
+  category do
+    id 'misc'
+    entry do
+      name 'Detach'
+      command 'PREFIX-d'
+    end
+    entry do
+      name 'Enter command mode'
+      command 'PREFIX-:'
+    end
+    entry do
+      name 'See all keybindings'
+      command 'PREFIX-?'
+    end
+    entry do
+      name 'Reload config file (`.tmux.conf`)'
+      command 'PREFIX-r'
+      notes 'custom mapping'
+    end
+    entry do
+      name 'Switch to next session'
+      command 'PREFIX-('
+    end
+    entry do
+      name 'Switch to previous session'
+      command 'PREFIX-)'
+    end
+    entry do
+      name 'Show session menu'
+      command 'PREFIX-s'
+    end
+    entry do
+      name 'Rename session'
+      command 'PREFIX-$'
+    end
+    entry do
+      name 'Toggle logging output to ~/*window_name*.log'
+      command 'PREFIX-P'
+      notes 'custom mapping'
+    end
+    entry do
+      name 'Enter copy mode'
+      command 'ESCAPE'
+    end
+    entry do
+      name 'Paste from buffer'
+      command 'p'
+    end
+    entry do
+      name 'Copy buffer to MAC clipboard'
+      command 'CTRL-c'
+    end
+  end
 
   category do
     id 'windows'
@@ -15,6 +116,40 @@ cheatsheet do
     entry do
       name 'go to next window'
       command 'PREFIX-n'
+    end
+    entry do
+      name 'Select next window'
+      command 'PREFIX CTRL-h'
+      notes 'custom mapping'
+    end
+    entry do
+      name 'Select previous window'
+      command 'PREFIX CTRL-l'
+      notes 'custom mapping'
+    end
+    entry do
+      name 'Go to window no `1`'
+      command 'PREFIX-1'
+    end
+    entry do
+      name 'Go to window no `2`'
+      command 'PREFIX-2'
+    end
+    entry do
+      name 'Find window by name'
+      command 'PREFIX-f'
+    end
+    entry do
+      name 'Select window by menu'
+      command 'PREFIX-w'
+    end
+    entry do
+      name 'Kill window (after confirmation)'
+      command 'PREFIX-&'
+    end
+    entry do
+      name 'Move window to another session'
+      command 'PREFIX-.'
     end
   end
 
@@ -33,8 +168,165 @@ cheatsheet do
       name 'split vertically'
       command 'PREFIX-"'
     end
+    entry do
+      name 'split vertically'
+      command 'PREFIX--'
+      notes 'custom mapping'
+    end
+    entry do
+      name 'Cycle through panes'
+      command 'PREFIX-o'
+    end
+
+    entry do
+      name 'Select next pane in vim-direction'
+      command 'PREFIX-h, PREFIX-j, PREFIX-j, PREFIX-k, PREFIX-l'
+      notes 'custom mapping'
+    end
+    entry do
+      name 'Cycle pane layout (`even-horizontal`, `even-vertical`, `main-horizontal`, `main-vertical`, `tiled`)'
+      command 'PREFIX-SPACE'
+    end
+    entry do
+      name 'Resize pane in vim-direction (5 column-wise)'
+      command 'PREFIX-H, PREFIX-J, PREFIX-J, PREFIX-K, PREFIX-L'
+      notes 'custom mapping'
+    end
+    entry do
+      name 'Move active pane to a new window'
+      command 'PREFIX-!'
+    end
+    entry do
+      name 'Zoom pane'
+      command 'PREFIX-z'
+      notes 'tmux 1.8 needed'
+    end
+    entry do
+      name 'Maximize pane'
+      command 'PREFIX-UP'
+      notes 'custom mapping'
+    end
+    entry do
+      name 'Undo maximize pane'
+      command 'PREFIX-DOWN'
+      notes 'custom mapping'
+    end
+    entry do
+      name 'Kill pane (after confirmation)'
+      command 'PREFIX-x'
+    end
   end
 
-  # TODO: More
-end
+  category do
+    id 'command mode'
+    entry do
+      name 'Open new window, name it *windowname* and run *redis-server* in it.'
+      command 'new-window -n redis "redis-server"'
+    end
+    entry do
+      name 'Copy entire visible contents of pane into the paste buffer'
+      command 'capture-pane'
+    end
+    entry do
+      name 'Show contents of actual buffer'
+      command 'show-buffer'
+    end
+    entry do
+      name 'Save buffer to `file.txt`'
+      command 'save-buffer file.txt'
+    end
+    entry do
+      name 'Show all buffers'
+      command 'list-buffers'
+    end
+    entry do
+      name 'Chosse a buffer and paste'
+      command 'choose-buffer'
+    end
+    entry do
+      name 'Move pane 1 in window 1 of session source_session_name to the actual window'
+      command 'join-pane -s source_session_name:1.1'
+    end
+    entry do
+      name 'Move pane 1 in window 2 of session src_sess to session dst_session in window 1 near pane 1'
+      command 'join-pane -s src_sess:2.1 -t dst_sess:1.1'
+    end
+  end
 
+  category do
+    id 'copy mode'
+    entry do
+      name 'Move around'
+      command 'h, j, k, l'
+    end
+    entry do
+      name 'Leave copy mode'
+      command 'ENTER'
+    end
+    entry do
+      name 'Jump to next word'
+      command 'w'
+    end
+    entry do
+      name 'Jump to previous word'
+      command 'b'
+    end
+    entry do
+      name 'Jump to next `A` in the actual line'
+      command 'fA'
+    end
+    entry do
+      name 'Jump to previous `A` in the actual line'
+      command 'FA'
+    end
+    entry do
+      name 'Down one page'
+      command 'CTRL-b'
+    end
+    entry do
+      name 'Up one page'
+      command 'CTRL-f'
+    end
+    entry do
+      name 'Jump to top of buffer'
+      command 'g'
+    end
+    entry do
+      name 'Jump to bottom of buffer'
+      command 'G'
+    end
+    entry do
+      name 'Backward search'
+      command '?'
+    end
+    entry do
+      name 'Foreward search'
+      command '/'
+    end
+    entry do
+      name 'Go to next occurence'
+      command 'n'
+    end
+    entry do
+      name 'Go to previous occurence'
+      command 'N'
+    end
+    entry do
+      name 'Begin selecting text'
+      command 'SPACE'
+    end
+    entry do
+      name 'Begin selecting text'
+      command 'v'
+    end
+    entry do
+      name 'Copy selection to buffer'
+      command 'y'
+    end
+  end
+  notes '
+* [`~/.tmux.conf`](https://github.com/der-flo/dotfiles/blob/master/tmux.conf)
+* [tmux: Productive Mouse-Free Development](http://pragprog.com/book/bhtmux/tmux).
+* [Man page](http://www.openbsd.org/cgi-bin/man.cgi?query=tmux)
+'
+end
