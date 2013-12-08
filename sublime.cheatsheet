@@ -10,9 +10,10 @@ cheatsheet do
     entry do
       name 'go to file'
       command '⌘T'
-      notes 'Slashes and underscores delimit words; ' \
-            'an appended `:72` jumps to line number 72; ' \
-            'an appended `@create` jumps to method `create`'
+      notes %(Slashes and underscores delimit words
+* an appended `:72` jumps to line number 72
+* an appended `@create` jumps to method `create`
+)
     end
     entry do
       name 'go to project'
@@ -50,8 +51,9 @@ cheatsheet do
     entry do
       name 'new file with path input'
       command '⌘⌥N'
-      notes 'Via AdvancedNewFile; ' \
-            'input path for new file (use autocompletion!); `mkdir -p` included'
+      notes %{Via AdvancedNewFile
+* input path for new file (use autocompletion!)
+* `mkdir -p` included}
     end
   end
 
