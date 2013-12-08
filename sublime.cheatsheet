@@ -1,7 +1,7 @@
 # TODO: License?
 
 cheatsheet do
-  title 'Sublime Text 2'
+  title 'Sublime Text 3'
   short_name 'sublime'
   introduction 'Basis: https://gist.github.com/lucasfais/1207002, thanks Lucas!'
 
@@ -10,13 +10,16 @@ cheatsheet do
     entry do
       name 'go to file'
       command '⌘T'
+      notes 'Slashes and underscores delimit words; ' \
+            'an appended `:72` jumps to line number 72; ' \
+            'an appended `@create` jumps to method `create`'
     end
     entry do
       name 'go to project'
       command '⌘⌃P'
     end
     entry do
-      name 'go to methods'
+      name 'go to method'
       command '⌘R'
     end
     entry do
@@ -39,6 +42,16 @@ cheatsheet do
       name 'new window'
       command '⌘⇧N'
       notes 'useful for new project'
+    end
+    entry do
+      name 'new file'
+      command '⌘N'
+    end
+    entry do
+      name 'new file with path input'
+      command '⌘⌥N'
+      notes 'Via AdvancedNewFile; ' \
+            'input path for new file (use autocompletion!); `mkdir -p` included'
     end
   end
 
@@ -129,6 +142,11 @@ cheatsheet do
       command '⌘⇧U'
       notes 'movement redo'
     end
+    entry do
+      name 'select lines'
+      command '⌃⇧UP ⌃⇧DOWN'
+      notes 'span cursor over more lines'
+    end
   end
 
   category do
@@ -168,12 +186,16 @@ cheatsheet do
   category do
     id 'Splits/Tabs'
     entry do
-      name 'single column'
+      name 'single column, single row'
       command '⌘⌥1'
     end
     entry do
       name 'two columns'
       command '⌘⌥2'
+    end
+    entry do
+      name 'two rows'
+      command '⌘⌥⇧2'
     end
     entry do
       name 'grid'
