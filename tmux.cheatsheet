@@ -324,8 +324,8 @@ cheatsheet do
       command 'y'
     end
   end
-  notes '
-* [`~/.tmux.conf`](https://github.com/der-flo/dotfiles/blob/master/tmux.conf)
+  notes \
+'* [`~/.tmux.conf`](https://github.com/der-flo/dotfiles/blob/master/tmux.conf)
 * [tmux: Productive Mouse-Free Development](http://pragprog.com/book/bhtmux/tmux).
 * [Man page](http://www.openbsd.org/cgi-bin/man.cgi?query=tmux)
 '
