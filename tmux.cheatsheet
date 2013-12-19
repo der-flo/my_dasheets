@@ -16,11 +16,11 @@ cheatsheet do
       command 'tmux new -s sessionname'
     end
     entry do
-      name 'Create a detached session and run _top_ inside'
+      name 'Create a detached session and run *top* inside'
       command 'tmux new -s sessionname -d top'
     end
     entry do
-      name 'Create session _sessionname_ with window _win_'
+      name 'Create session *sessionname* with window *win*'
       command 'tmux new -s sessionname -n win'
     end
     entry do
@@ -36,7 +36,7 @@ cheatsheet do
       command 'tmux attach'
     end
     entry do
-      name 'Attach to session with name _sessionname_'
+      name 'Attach to session with name *sessionname*'
       command 'tmux attach -t sessionname'
     end
     entry do

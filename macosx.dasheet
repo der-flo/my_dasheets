@@ -1,0 +1,13 @@
+cheatsheet do
+  title 'Mac OS X'
+  short_name 'macosx'
+
+  category do
+    id 'misc'
+    entry do
+      command '⇧⌘.'
+      name 'toggle visiblity of hidden files in file open dialog'
+      notes 'Found [here](http://www.tekrevue.com/tip/how-to-temporarily-see-hidden-files-folders-in-mac-os-x/)'
+    end
+  end
+end
