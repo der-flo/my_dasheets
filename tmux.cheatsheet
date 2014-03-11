@@ -40,6 +40,10 @@ cheatsheet do
       command 'tmux attach -t sessionname'
     end
     entry do
+      name 'Attach to session with name *sessionname* and detach others'
+      command 'tmux attach -t sessionname -d'
+    end
+    entry do
       name 'Kill session by name'
       command 'tmux kill-session -t sessionname'
     end
